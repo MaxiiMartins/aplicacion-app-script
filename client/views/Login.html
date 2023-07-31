@@ -1,0 +1,66 @@
+//<script type="text/jsx">
+
+
+function Login() {
+    const logo = "https://img.freepik.com/vector-gratis/plantilla-logo-dentista_1061-59.jpg"
+    const fondo = "https://img.freepik.com/foto-gratis/dentistas-eligen-equipos-mesa_1150-19659.jpg?w=2000&t=st=1690769871~exp=1690770471~hmac=a9689f9e773beba158b49922a1cc6bb8473f795b19f4e651ae1252ceb29d68c0"
+    const nombre = "Consultorio Odontologico"
+    const color_primario = "bg-cyan-800"
+    const color_secundario = "bg-cyan-600"
+    const color_texto = "text-white"
+    const placeholder = "placeholder-slate-200"
+    return (
+        <div
+            className="flex h-screen w-full items-center justify-center bg-gray-900 bg-cover bg-bottom bg-no-repeat"
+            style={{
+                backgroundImage:
+                    `url(${fondo})`
+            }}
+        >
+            <div className="rounded-xl bg-gray-800 bg-opacity-50 px-16 py-10 shadow-lg backdrop-blur-md max-sm:px-8">
+                <div className={`${color_texto}`}>
+                    <div className="mb-6 flex flex-col items-center">
+                            <img
+                                src={logo}
+                                alt=""
+                                srcSet=""
+                                width={150}
+                                className="rounded-full p-2"
+                            />
+                        <h1 className="mb-2 text-2xl">{nombre}</h1>
+                        <span className={`${color_texto}/70`}>Ingrese sus credenciales</span>
+                    </div>
+                    <form>
+                        <div className="mb-4 text-lg">
+                            <input
+                                className={`rounded-3xl border-none ${color_primario} bg-opacity-50 px-6 py-2 text-center text-inherit ${placeholder} shadow-lg outline-none backdrop-blur-md`}
+                                type="text"
+                                autoComplete="off"
+                                name="name"
+                                placeholder="id@email.com"
+                            />
+                        </div>
+                        <div className="mb-4 text-lg">
+                            <input
+                                className={`rounded-3xl border-none ${color_primario} bg-opacity-50 px-6 py-2 text-center text-inherit ${placeholder} shadow-lg outline-none backdrop-blur-md`}
+                                type="Password"
+                                autoComplete="off"
+                                name="name"
+                                placeholder="*********"
+                            />
+                        </div>
+                        <div className="mt-8 flex justify-center text-lg text-black">
+                            <Link to="/"
+                                className={`rounded-3xl ${color_primario} bg-opacity-50 px-10 py-2 text-white shadow-xl backdrop-blur-md transition-colors duration-300 hover:${color_secundario}`
+}                            >
+                                Ingresar
+                            </Link>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    )
+}
+
+  // </script>

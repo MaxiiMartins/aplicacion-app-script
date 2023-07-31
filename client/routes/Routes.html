@@ -1,0 +1,15 @@
+//<script type="text/jsx">
+
+function Routes(){
+ return (
+    <Router>
+        <Redirect to="/" />
+        <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/login" component={Login} />
+        </Switch>
+    </Router>
+ )
+}
+
+//</script>
